@@ -1,5 +1,6 @@
 package org.example;
 
+import java.awt.font.NumericShaper;
 import java.util.Scanner;
 
 public class Menu {
@@ -41,7 +42,13 @@ public class Menu {
     }
     public static void runCalculator() {
         while (true) {
-            showOptions();
+            try {
+                showOptions();
+            }
+            catch (NumberFormatException exception) {
+                System.out.println("Wrong number");
+                continue;
+            }
             switch (option) {
                 case 1 -> {
                     System.out.println("Input number:");

@@ -18,15 +18,37 @@ public class Calculator {
     }
 
     public static Double sum() {
+        if (a == null || b == null) {
+            return checkIfNull();
+        }
         return a + b;
     }
     public static Double subtraction() {
+        if (a == null || b == null) {
+            return checkIfNull();
+        }
         return a - b;
     }
     public static Double multiplication() {
+        if (a == null || b == null) {
+            return checkIfNull();
+        }
         return a * b;
     }
     public static Double division() {
+        if (a == null || b == null) {
+            return checkIfNull();
+        }
         return a / b;
+    }
+    public static Double checkIfNull() {
+        if (a == null && b == null) {
+            return null;
+        } else if (a == null) {
+            return b;
+        } else if (b == null) {
+            return a;
+        }
+        return null;
     }
 }
