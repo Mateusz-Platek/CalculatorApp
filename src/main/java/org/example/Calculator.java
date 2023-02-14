@@ -1,35 +1,32 @@
 package org.example;
 
 public class Calculator {
-    private Double a;
-    private Double b;
-    Calculator() {
-        this.a = null;
-        this.b = null;
+    private static Double a;
+    private static Double b;
+
+    public static void setA(Double a) {
+        Calculator.a = a;
     }
-    public void setA(Double a) {
-        this.a = a;
-    }
-    public Double getA() {
+    public static Double getA() {
         return a;
     }
-    public void setB(Double b) {
-        this.b = b;
+    public static void setB(Double b) {
+        Calculator.b = b;
     }
-    public Double getB() {
+    public static Double getB() {
         return b;
     }
-    Double sum() {
+
+    public static Double sum() {
         return a + b;
     }
-    Double subtraction() {
+    public static Double subtraction() {
         return a - b;
     }
-    Double multiplication() {
+    public static Double multiplication() {
         return a * b;
     }
-    Double division() {
+    public static Double division() {
         return a / b;
     }
-
 }
